@@ -1,3 +1,8 @@
+---
+title: C
+layout: default
+---
+
 # C Programming Language
 
 ![Logo](https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/C.png)

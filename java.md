@@ -1,3 +1,8 @@
+---
+title: Java
+layout: default
+---
+
 # Java Programming Language
 
 ![Logo](https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/Java.png)

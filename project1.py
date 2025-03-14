@@ -100,6 +100,7 @@ def create_language_subsites(rank, logo, lang, rating, change):
     
     # Create markdown content
     content = [
+        f'---\ntitle: {lang}\nlayout: default\n---\n\n'
         f"# {lang} Programming Language\n\n",
         logo + "\n\n" if logo else "",
         f"**Rank:** {rank}\n\n",
@@ -118,7 +119,7 @@ def create_language_subsites(rank, logo, lang, rating, change):
 def create_site(main_url):
     """
     Main function to create markdown documentation
-    Args:
+    Args:>
         main_url: URL of the page to scrape
     """
     try:
@@ -128,7 +129,7 @@ def create_site(main_url):
         soup = BeautifulSoup(response.text, 'html.parser')
 
         # Initialize main content components
-        main_md = []
+        main_md = ['---\ntitle: Home\nlayout: default\n---\n\n']
         
         # Add main header
         h1 = soup.find('h1')
@@ -159,14 +160,14 @@ def create_site(main_url):
                 create_language_subsites(rank, logo, lang, rating, change)
 
         # Write main markdown file
-        with open('tiobe_main.md', 'w', encoding='utf-8') as f:
+        with open('index.md', 'w', encoding='utf-8') as f:
             f.write("".join(main_md))
 
         print("Main site and language subsites created successfully!")
 
     except Exception as e:
         print(f"Site creation failed: {e}")
-        with open('tiobe_main.md', 'w') as f:
+        with open('index.md', 'w') as f:
             f.write(f"# Error\nCould not generate documentation: {str(e)}")
 
 if __name__ == '__main__':
