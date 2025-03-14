@@ -1,3 +1,8 @@
+---
+title: Home
+layout: default
+---
+
 # TIOBE Index for March 2025
 
 The TIOBE Programming Community index is an indicator of the

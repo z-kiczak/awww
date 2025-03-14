@@ -1,3 +1,8 @@
+---
+title: Python
+layout: default
+---
+
 # Python Programming Language
 
 ![Logo](https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/Python.png)
