@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Language Rankings</title>
+</head>
+<body>
+    <header>
+        <h1>Programming Language Rankings - absolutely random!</h1>
+        <p><em>Vote for your favorites!</em></p>
+    </header>
+
+    <article>
+        <h2>Current Rankings Categories</h2>
+        <ol type="I">
+            <li>Most Memetic/Funny</li>
+            <li>Most Useless</li>
+            <li>Most Beautiful Syntax</li>
+            <li>Hardest to Learn</li>
+        </ol>
+    </article>
+
+    <!-- Ranking 1: Most Memetic/Funny -->
+    <section>
+        <h2>1. Most Memetic/Funny Language</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th><strong>Language</strong></th>
+                    <th><strong>Votes</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>LOLCODE</td>
+                    <td class="vote-count" data-language="LOLCODE">0</td>
+                </tr>
+                <tr>
+                    <td>Brainf*ck</td>
+                    <td class="vote-count" data-language="Brainf*ck">0</td>
+                </tr>
+                <tr>
+                    <td>ArnoldC</td>
+                    <td class="vote-count" data-language="ArnoldC">0</td>
+                </tr>
+                <tr>
+                    <td>Omgrofl</td>
+                    <td class="vote-count" data-language="Omgrofl">0</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <img src="images/funny.jpg" alt="Meme languages collage">
+        
+        <form method="POST" action="process_vote.php">
+            <input type="hidden" name="category" value="Most Memetic/Funny">
+            <label for="meme-vote">Your Vote:</label>
+            <select id="meme-vote" name="language">
+                <optgroup label="Funny Languages">
+                    <option value="LOLCODE">LOLCODE</option>
+                    <option value="Brainf*ck">Brainf*ck</option>
+                    <option value="ArnoldC">ArnoldC</option>
+                    <option value="Omgrofl">Omgrofl</option>
+                </optgroup>
+            </select>
+            <input type="text" name="voter" placeholder="Your name">
+            <button type="submit">Vote</button>
+        </form>
+        
+        <progress value="0" max="100">0%</progress>
+        <p>Votes collected: 0/100 (minimum for validation)</p>
+    </section>
+
+    <!-- Ranking 2: Most Useless -->
+    <section>
+        <h2>2. Most Useless Language</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th><strong>Language</strong></th>
+                    <th><strong>Votes</strong></th>
+                </tr>
+            </thead>
+
+            <caption>Questionable Languages</caption>
+            <tbody>
+                <tr>
+                    <td><em>Befunge</em></td>
+                    <td class="vote-count" data-language="Befunge">0</td>
+                </tr>
+                <tr>
+                    <td>Whitespace</td>
+                    <td class="vote-count" data-language="Whitespace">0</td>
+                </tr>
+                <tr>
+                    <td>Deadfish</td>
+                    <td class="vote-count" data-language="Deadfish">0</td>
+                </tr>
+                <tr>
+                    <td>Whenever</td>
+                    <td class="vote-count" data-language="Whenever">0</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <img src="images/useless.jpg" alt="Meme languages collage">
+        
+        <form method="POST" action="process_vote.php">
+            <input type="hidden" name="category" value="Most Useless">
+            <label for="useless-vote">Your Vote:</label>
+            <select id="useless-vote" name="language">
+                <optgroup label="Useless Languages">
+                    <option value="Befunge">Befunge</option>
+                    <option value="Whitespace">Whitespace</option>
+                    <option value="Deadfish">Deadfish</option>
+                    <option value="Whenever">Whenever</option>
+                </optgroup>
+            </select>
+            <input type="text" name="voter" placeholder="Your name">
+            <button type="submit">Vote</button>
+        </form>
+        
+        <progress value="0" max="100">0%</progress>
+        <p>Votes collected: 0/100 (minimum for validation)</p>
+    </section>
+
+    <!-- Ranking 3: Most Beautiful Syntax -->
+    <section>
+        <h2>3. Most Beautiful Syntax</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th><strong>Language</strong></th>
+                    <th><strong>Votes</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Shakespeare</td>
+                    <td class="vote-count" data-language="shakespeare">0</td>
+                </tr>
+                <tr>
+                    <td>Piet</td>
+                    <td class="vote-count" data-language="piet">0</td>
+                </tr>
+                <tr>
+                    <td>Velato</td>
+                    <td class="vote-count" data-language="velato">0</td>
+                </tr>
+                <tr>
+                    <td>ZOMBIE</td>
+                    <td class="vote-count" data-language="zombie">0</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <img src="images/artsy.jpg" alt="Meme languages collage">
+        
+        <form method="POST" action="process_vote.php">
+            <input type="hidden" name="category" value="Most Beautiful Syntax">
+            <label for="beauty-vote">Your Vote:</label>
+            <select id="beauty-vote" name="language">
+                <optgroup label="Artistic Languages">
+                    <option value="shakespeare">Shakespeare</option>
+                    <option value="piet">Piet</option>
+                    <option value="velato">Velato</option>
+                    <option value="zombie">ZOMBIE</option>
+                </optgroup>
+            </select>
+            <input type="text" name="voter" placeholder="Your name">
+            <button type="submit">Vote</button>
+        </form>
+        
+        <progress value="0" max="100">0%</progress>
+        <p>Votes collected: 0/100 (minimum for validation)</p>
+    </section>
+
+    <!-- Ranking 4: Hardest to Learn -->
+    <section>
+        <h2>4. Hardest to Learn 🔥🔥🔥🔥</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th><strong>Language</strong></th>
+                    <th><strong>Votes</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Malbolge</td>
+                    <td class="vote-count" data-language="malbolge">0</td>
+                </tr>
+                <tr>
+                    <td>Brainfuck</td>
+                    <td class="vote-count" data-language="Brainfuck">0</td>
+                </tr>
+                <tr>
+                    <td>COBOL</td>
+                    <td class="vote-count" data-language="COBOL">0</td>
+                </tr>
+                <tr>
+                    <td>Fortran</td>
+                    <td class="vote-count" data-language="Fortran">0</td>
+                </tr>
+                <tr>
+                    <td>Assembly</td>
+                    <td class="vote-count" data-language="Assembly">0</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <img src="images/hard.jpg" alt="Meme languages collage">
+        
+        <form method="POST" action="process_vote.php">
+            <input type="hidden" name="category" value="Hardest to Learn">
+            <select id="hard-vote" name="language">
+                <optgroup label="Challenging Languages">
+                    <option value="malbolge">Malbolge</option>
+                    <option value="Brainfuck">Brainfuck</option>
+                    <option value="COBOL">COBOL</option>
+                    <option value="Fortran">Fortran</option>
+                    <option value="Assembly">Assembly</option>
+                </optgroup>
+            </select>
+            <input type="text" name="voter" placeholder="Your name">
+            <button type="submit">Vote</button>
+        </form>
+        
+        <progress value="0" max="100">0%</progress>
+        <p>Votes collected: 0/100 (minimum for validation)</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Language Rankings. Vote responsibly!</p>
+    </footer>
+
+    <!--Updating the voting progress-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const forms = document.querySelectorAll('form');
+            
+            forms.forEach(form => {
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const formData = new FormData(this);
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    
+                    // More reliable way to find progress bar and votes text
+                    const formElements = Array.from(this.elements);
+                    const submitIndex = formElements.indexOf(submitButton);
+                    const progressBar = this.nextElementSibling?.tagName === 'PROGRESS' 
+                        ? this.nextElementSibling 
+                        : this.nextElementSibling?.nextElementSibling;
+                    const votesText = progressBar?.nextElementSibling;
+        
+                    if (!progressBar || !votesText) {
+                        console.error('Could not find progress elements after form');
+                        return;
+                    }
+        
+                    try {
+                        submitButton.disabled = true;
+                        
+                        const response = await fetch('process_vote.php', {
+                            method: 'POST',
+                            body: formData
+                        });
+                        
+                        const data = await response.json();
+                        
+                        if (data.status === 'success') {
+                            const newValue = Math.min(data.totalVotes, 100);
+                            progressBar.value = newValue;
+                            progressBar.textContent = `${newValue}%`;
+                            votesText.textContent = `Votes collected: ${data.totalVotes}/100 ` + 
+                                                  (data.totalVotes >= 100 ? '(valid ranking!)' : '(minimum for validation)');
+                            
+                            // Update specific language count
+                            const selectedLanguage = formData.get('language');
+                            const voteCountCells = document.querySelectorAll(`.vote-count[data-language="${selectedLanguage}"]`);
+                            voteCountCells.forEach(cell => {
+                                cell.textContent = data.languageVotes;
+                            });
+                            
+                            alert(`Thank you for voting for ${selectedLanguage}!`);
+                            this.reset();
+                        } else {
+                            throw new Error(data.message || 'Unknown error');
+                        }
+                    } catch (error) {
+                        console.error('Error:', error);
+                        alert(`Error: ${error.message}`);
+                    } finally {
+                        submitButton.disabled = false;
+                    }
+                });
+            });
+        });
+        </script>
+    </body>
+    </html>
