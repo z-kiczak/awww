@@ -1,0 +1,11 @@
+{% extends 'routes/base.html' %}
+
+{% block content %}
+    <h2>{% if object %}Edytuj{% else %}Stwórz nową{% endif %} trasę</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Zapisz</button>
+    </form>
+    <a href="{% url 'route_list' %}">Powrót do listy</a>
+{% endblock %}
