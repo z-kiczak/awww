@@ -1,0 +1,10 @@
+{% extends 'routes/base.html' %}
+
+{% block content %}
+    <h2>Czy na pewno chcesz usunąć punkt ({{ point.x }}, {{ point.y }})?</h2>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Tak, usuń</button>
+        <a href="{% url 'route_detail' pk=point.route.pk %}">Anuluj</a>
+    </form>
+{% endblock %}
