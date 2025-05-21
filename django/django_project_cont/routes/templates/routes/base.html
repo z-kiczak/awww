@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edytor Tras</title>
+    {% load static %}
+</head>
+<body>
+    <header>
+        <h1>Interaktywny Edytor Tras</h1>
+        <nav>
+            {% if user.is_authenticated %}
+                Witaj, {{ user.username }}!
+                <a href="{% url 'route_list' %}">Moje trasy</a>
+                <a href="{% url 'logout' %}">Wyloguj</a>
+            {% else %}
+                <a href="{% url 'login' %}">Zaloguj</a>
+                <a href="{% url 'register' %}">Zarejestruj</a>
+            {% endif %}
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <script src="{% static 'js/dist/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{% extends 'routes/base.html' %}
+
+{% block content %}
+    <h2>Trasa: {{ route.title }}</h2>
+    <p>Obraz tła: {{ route.background.title }}</p>
+    
+    <!-- Display the combined image with route -->
+    <div id="image-container" 
+        style="width: 800px; height: 600px; border: 1px solid #000; position: relative;"
+        data-route-id="{{ route.pk }}">
+        <img
+            id="background-image"
+            src="data:image/png;base64,{{ route_image }}"
+            style="max-width: 100%; max-height: 100%; display: block; cursor: crosshair;"
+            alt="Route visualization"
+        />
+        <div id="marker-layer" 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
+        </div>
+    </div>
+
+    <!-- Dodawanie punktu po kliknięciu w obrazek przez użytkownika -->
+    <form id="add-point-form" method="post" action="{% url 'add_point' pk=route.pk %}" style="opacity: 0; height: 0; overflow: hidden;">
+        {% csrf_token %}
+        <input type="hidden" id="x-input" name="x" required>
+        <input type="hidden" id="y-input" name="y" required>
+    </form>
+    
+    <h3>Punkty trasy:</h3>
+    <ul id="points-list">
+        {% for point in points %}
+            <li class="point-row" data-x="{{ point.x }}" data-y="{{ point.y }}">
+                ({{ point.x }}, {{ point.y }})
+                <button type="button" class="show-point-btn">Pokaż</button>
+                <a href="{% url 'delete_point' route_pk=route.pk point_pk=point.pk %}">Usuń</a>
+            </li>
+        {% empty %}
+            <li>Brak punktów w trasie</li>
+        {% endfor %}
+    </ul>
+   
+    
+    <a href="{% url 'add_point' pk=route.pk %}">Dodaj punkt</a>
+    <a href="{% url 'route_list' %}">Powrót do listy</a>
+{% endblock %}

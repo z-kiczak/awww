@@ -1,0 +1,19 @@
+{% extends 'routes/base.html' %}
+
+{% block content %}
+    <h2>Moje trasy</h2>
+    <a href="{% url 'route_create' %}">Stwórz nową trasę</a>
+    
+    {% if routes %}
+        <ul>
+            {% for route in routes %}
+                <li>
+                    <a href="{% url 'route_detail' pk=route.pk %}">{{ route.title }}</a>
+                    (na obrazie: {{ route.background.title }})
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nie masz jeszcze żadnych tras.</p>
+    {% endif %}
+{% endblock %}
